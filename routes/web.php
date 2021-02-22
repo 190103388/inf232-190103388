@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,8 @@ Route::get('/name', function () {
 Route::get('/faculty/{id?}', function ($id = 0) {
     return view('faculty',['id'=> $id]);
 });
+
+
+Route::get('/lab5/{id}',[StudentController::class, 'show'] );
 
 
