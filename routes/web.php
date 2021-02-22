@@ -21,4 +21,8 @@ Route::get('/name', function () {
     return view('name');
 });
 
+Route::get('/faculty/{id?}', function ($id = 0) {
+    return view('faculty',['id'=> $id]);
+});
+
 
